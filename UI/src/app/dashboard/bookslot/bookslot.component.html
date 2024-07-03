@@ -1,0 +1,169 @@
+<div class="row mt-3 justify-content-center">
+    <div id="toast-container">
+  <div id="toast" [ngClass]="{'show': showToast, 'hidden': !showToast, 'success': toastType === 'success', 'error': toastType === 'error'}" class="toast">
+    <i class="toast-icon fas" [ngClass]="{'fa-check-circle': toastType === 'success', 'fa-times-circle': toastType === 'error'}"></i>
+    <span class="toast-message">{{ toastMessage }}</span>
+  </div>
+</div>
+    <div class="col-md-11 card" >
+        <div class="row " style="background-color: #097945;color: white;margin: 10px;padding: 10px;">
+            <div class="col-md-12 d-flex justify-content-center" >
+                <h2>Book Slot</h2>
+            </div>
+        </div>
+        <div *ngIf="load" class="d-flex justify-content-center">
+            <div class="loadingio-spinner-pulse-f18fi8swilg"><div class="ldio-letfb25733">
+                <div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <!-- <h4>ID: {{locationid}}</h4> -->
+                        <form class="card" name="bookingForm">
+                            <!-- select vehicle    -->
+                            <div class="col-md-12 m-2">
+                                <div class="form-group">
+                                    <label for="vehicle_type">Select Vehicle Type</label>
+                                    <select class="form-control"  [(ngModel)]="bookingdetails.vehicle_type" name="vehicle_type" id="vehicle_type">
+                                            <option *ngFor='let vehicle of vehicles$' value="{{vehicle.vehicle_type}}">{{vehicle.vehicle_type}}</option>                                  
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end vechicle select -->
+
+                            <!-- vehicle number enter -->
+                            <div class="col-md-12 m-2">
+                                    <label for="vehicle_no">Enter Vehicle Number</label>
+                                    <input class="input" type="text" [(ngModel)]="bookingdetails.vehicle_no" name="vehicle_no" placeholder="Enter Vehicle Number" autocomplete="off" required>
+
+                                    <!-- <small>FORMAT</small> -->
+                            </div>
+                            <!-- end vehicle number -->
+
+                            <!-- select date and time -->
+                            <div class="col-md-12 mt-2 mb-3">
+                                <div class="row m-2">
+                                    <div>
+                                        Select Time: 
+                                        <br>
+                                        <input type="time" id="time" [(ngModel)]="bookingdetails.time" name="time">
+                                        <!-- <small>NOTE</small> -->
+                                    </div>            
+                                </div>
+                            </div>
+                            <!-- end date and time -->
+
+                            <!-- enter hours    -->
+                            <div class="col-md-12 mb-3 ml-2">
+                                <label for="duration">Enter Number of Hours</label>
+                                <input class="input mt-0" name="duration" id="duration" type="number" min="1" max="24" [(ngModel)]="bookingdetails.duration" id="duration" placeholder="Estimated Hours" autocomplete="off"  required>
+                            </div>
+                            <!-- end hours    -->
+
+                            <!-- select slot    -->
+                            <div class="col-md-12">
+                                <h4 class="m-2">Select Slot</h4>
+                                <div class="row ">
+                                    <div class="col-2 m-1 pt-3 pb-0"  *ngFor="let slot of slots$" >   
+                                        <div  *ngIf="slot.status != 0;" >
+                                            
+                                            <input type="radio" disabled [(ngModel)]="bookingdetails.slotid" id="{{slot.slotno}}" name="slotid" value="{{slot.slotid }}">
+                                            <label  id="slot" for="{{slot.slotno}}">{{slot.slotno}}</label> 
+                                            <small class="text-danger">Already Booked!</small>
+                                          
+                                        </div>    
+                                        <div *ngIf="slot.status == 0;">
+                                            <input type="radio"  [(ngModel)]="bookingdetails.slotid" id="{{slot.slotno}}" name="disabled" value="{{slot.slotid }}">
+                                            <label id="slot" for="{{slot.slotno}}">{{slot.slotno}}</label><br>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end slot select     -->
+                            
+                            <div class="credit-card">
+                                <div class="form-header">
+                                  <h4 class="title">Pre-Authorize Credit Card</h4>
+                                </div>
+                            
+                                <div class="form-body">
+                                  <!-- Card Number -->
+                                  <input type="text" class="card-number" placeholder="Card Number">
+                            
+                                  <!-- Date Field -->
+                                  <div class="date-field">
+                                    <div class="month">
+                                      <select name="Month">
+                                        <option value="january">January</option>
+                                        <option value="february">February</option>
+                                        <option value="march">March</option>
+                                        <option value="april">April</option>
+                                        <option value="may">May</option>
+                                        <option value="june">June</option>
+                                        <option value="july">July</option>
+                                        <option value="august">August</option>
+                                        <option value="september">September</option>
+                                        <option value="october">October</option>
+                                        <option value="november">November</option>
+                                        <option value="december">December</option>
+                                      </select>
+                                    </div>
+                                    <div class="year">
+                                      <select name="Year">
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- Card Verification Field -->
+                                  <div class="card-verification">
+                                    <div class="cvv-input">
+                                      <input type="text" placeholder="CVV">
+                                    </div>
+                                    <div class="cvv-details">
+                                      <p>3 or 4 digits usually found <br> on the signature strip</p>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- Buttons -->
+                                  <!-- <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+                                  <button type="submit" class="paypal-btn"><a href="#">Pay With</a></button> -->
+                                </div>
+                            </div>
+
+
+                            <!-- book button    -->
+                            <div class="col-md-12 mt-3 mb-5">
+                                <div class="m-1 mt-2">
+                                    <div class="row">
+                                        <!-- <div class="col-2">
+                                            <input style="padding:10px;" type="reset" class="button" value="Reset">
+                                        </div> -->
+                                        <div class="col">
+                                            <button class="button"  (click)='addBooking()'>Book Slot</button>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- end book button -->
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

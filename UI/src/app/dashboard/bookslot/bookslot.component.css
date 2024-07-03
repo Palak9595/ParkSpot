@@ -1,0 +1,291 @@
+.formwrapper{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+.button{
+    border: none;
+    width: 220px;
+    margin: 3%;
+    color: white;
+    height: 35px;
+    background-color: #097945;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+
+.input{
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #1b2f36;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+
+.input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #28a745;   
+}
+
+.button-slot{
+    border: none;
+    width: 120px;
+    margin-top: 10px;
+    color: white;
+    height: 35px;
+    background-color: #097945;
+    font-weight: 900;
+    border-radius: 5px;
+}
+.button-slot:focus{
+    border: none;
+    width: 120px;
+    margin-top: 10px;
+    color: white;
+    height: 35px;
+    background-color: #17a2b8;
+    font-weight: 900;
+    border-radius: 5px;
+}
+.button-slot:disabled{
+    border: none;
+    width: 120px;
+    margin-top: 10px;
+    color: #000;
+    height: 35px;
+    background-color: #b5aeae;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"]:checked + #slot {
+    background: hsla(150, 75%, 50%, 1);
+    color: hsla(215, 0%, 100%, 1);
+    box-shadow: 0px 0px 10px hsla(150, 100%, 50%, 0.75);
+
+  }
+  input[type = "radio"]:disabled + #slot{
+    color: hsla(150, 5%, 75%, 1);
+    border-color: hsla(150, 5%, 75%, 1);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  #slot {
+    padding: 5px;
+    display: block;
+    background: white;
+    border: 2px solid hsla(150, 75%, 50%, 1);
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+    cursor: pointer;
+  }     
+ 
+  @keyframes ldio-letfb25733-1 {
+    0% { top: 36px; height: 128px }
+    50% { top: 60px; height: 80px }
+    100% { top: 60px; height: 80px }
+  }
+  @keyframes ldio-letfb25733-2 {
+    0% { top: 41.99999999999999px; height: 116.00000000000001px }
+    50% { top: 60px; height: 80px }
+    100% { top: 60px; height: 80px }
+  }
+  @keyframes ldio-letfb25733-3 {
+    0% { top: 48px; height: 104px }
+    50% { top: 60px; height: 80px }
+    100% { top: 60px; height: 80px }
+  }
+  .ldio-letfb25733 div { position: absolute; width: 30px }.ldio-letfb25733 div:nth-child(1) {
+    left: 35px;
+    background: #e15b64;
+    animation: ldio-letfb25733-1 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: -0.2s
+  }
+  .ldio-letfb25733 div:nth-child(2) {
+    left: 85px;
+    background: #f8b26a;
+    animation: ldio-letfb25733-2 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: -0.1s
+  }
+  .ldio-letfb25733 div:nth-child(3) {
+    left: 135px;
+    background: #abbd81;
+    animation: ldio-letfb25733-3 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: undefineds
+  }
+  
+  .loadingio-spinner-pulse-f18fi8swilg {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .ldio-letfb25733 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-letfb25733 div { box-sizing: content-box; }
+
+
+  /* Card CSS */
+  
+.credit-card {
+  width            : 360px;
+  height           : 300px;
+  margin           : 2%;
+  border           : 1px solid #ddd;
+  border-radius    : 6px;
+  background-color : #fff;
+  box-shadow       : 1px 2px 3px 0px rgba(0,0,0,0.10);
+}
+
+.form-header {
+  height        : 60px;
+  padding       : 20px 30px 0;
+  border-bottom : 1px solid #E1E8EE;
+}
+
+.form-body {
+  height  : 340px;
+  padding : 30px 30px 20px;
+}
+
+/* Title */
+
+.title {
+  margin    : 0;
+  color     : #5e6977;
+  font-size : 18px;
+}
+
+/* Common */
+
+.card-number,
+.cvv-input input,
+.month select,
+.paypal-btn,
+.proceed-btn,
+.year select {
+  height : 42px;
+}
+
+.card-number,
+.month select,
+.year select {
+  font-size   : 14px;
+  font-weight : 100;
+  line-height : 14px;
+}
+
+.card-number,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+  color   : #86939e;
+  opacity : .7;
+}
+
+/* Card Number */
+
+.card-number {
+  width         : 100%;
+  margin-bottom : 20px;
+  padding-left  : 20px;
+  border        : 2px solid #e1e8ee;
+  border-radius : 6px;
+}
+
+/* Date Field */
+
+.month select,
+.year select {
+  -moz-appearance     : none;
+  -webkit-appearance  : none;
+  width               : 145px;
+  margin-bottom       : 20px;
+  padding-left        : 20px;
+  border              : 2px solid #e1e8ee;
+  border-radius       : 6px;
+  background          : url('https://designmodo.com/demo/creditcardform/caret.png') no-repeat;
+  background-position : 85% 50%;
+}
+
+.month select {
+  float : left;
+}
+
+.year select {
+  float : right;
+}
+
+/* Card Verification Field */
+
+.cvv-input input {
+  width         : 145px;
+  float         : left;
+  padding-left  : 20px;
+  border        : 2px solid #e1e8ee;
+  border-radius : 6px;
+  background    : #fff;
+}
+
+.cvv-details {
+  float         : right;
+  margin-bottom : 20px;
+  font-size     : 12px;
+  font-weight   : 300;
+  line-height   : 16px;
+}
+
+.cvv-details p {
+  margin-top : 6px;
+}
+
+/* Buttons Section */
+
+.paypal-btn,
+.proceed-btn {
+  cursor: pointer;
+  width         : 100%;
+  border-color  : transparent;
+  border-radius : 6px;
+  font-size     : 16px;
+}
+
+.proceed-btn {
+  margin-bottom : 10px;
+  background    : #7dc855;
+}
+
+.paypal-btn a,
+.proceed-btn a {
+  text-decoration : none;
+  cursor          : pointer;
+}
+
+.proceed-btn a {
+  color : #fff;
+}
+
+.paypal-btn a {
+  color : rgba(242, 242, 242, 0.7);
+}
+
+.paypal-btn {
+  padding-right : 95px;
+  background    : url('https://designmodo.com/demo/creditcardform/paypal-logo.svg') no-repeat 65% 56% #009cde;
+}
