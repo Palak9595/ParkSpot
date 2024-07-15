@@ -71,7 +71,7 @@
               <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <td class="h2">
-                    Welcome to ParkSpot Community!
+                    Welcome to Car Parking Community!
                   </td>
                 </tr>
                 <tr>
@@ -97,9 +97,9 @@
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td class="bodycopy">
-                        When you're on the go, the ParkSpot makes it easy to find and pay for parking without running back to feed the meter.
+                        When you're on the go, the free My-Parking makes it easy to find and pay for parking without running back to feed the meter.
                         And for added convenience, you can reserve spots ahead of time. <br>
-                        When you're looking for a spot in the moment or want to reserve a space ahead of time, ParkSpot puts the power in the palm of your hand.
+                        When you're looking for a spot in the moment or want to reserve a space ahead of time, ParkMobile puts the power in the palm of your hand.
                       </tr>
                       <tr>
                         <td style="padding: 20px 0 0 0;">
@@ -123,7 +123,7 @@
               <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center" class="footercopy">
-                    &reg; ParkSpot <br/>
+                    &reg; ParkRent <br/>
                   </td>
                 </tr>
                 <tr>
